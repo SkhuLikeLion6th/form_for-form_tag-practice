@@ -5,14 +5,13 @@ Rails.application.routes.draw do
 
   get 'home/new'
 
-  post 'home/create' => 'home#create', as: 'posts'
+  post 'home/create' => 'home#create'
   
-  get 'home/destroy/:post_id' => 'home#destroy', as: 'post_destroy'
-  #get 'home/destroy/:post_id', to: 'home#destroy', as: 'post_destroy'
+  get 'home/destroy/:post_id' => 'home#destroy'
 
   get 'home/edit/:post_id' => 'home#edit'
   
-  patch 'home/update/:post_id' => 'home#update', as: 'post'
+  patch 'home/update/:post_id' => 'home#update'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
